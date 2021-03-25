@@ -192,13 +192,34 @@
 			<artifactId>passay</artifactId>
 			<version>1.6.0</version>
 		</dependency>
+		 <!-- JQF: test dependency for @Fuzz annotation -->
+            <dependency>
+                <groupId>edu.berkeley.cs.jqf</groupId>
+                <artifactId>jqf-fuzz</artifactId>
+                <!-- confirm the latest version at: https://mvnrepository.com/artifact/edu.berkeley.cs.jqf -->
+                <version>1.3</version>
+                <scope>test</scope>
+            </dependency>
 
+            <!-- JUnit-QuickCheck: API to write generators -->
+            <dependency>
+                <groupId>com.pholser</groupId>
+                <artifactId>junit-quickcheck-generators</artifactId>
+                <version>0.9</version>
+                <scope>test</scope>
+            </dependency>
 
 
 	</dependencies>
 
 	<build>
 		<plugins>
+			<plugin>
+                    <groupId>edu.berkeley.cs.jqf</groupId>
+                    <artifactId>jqf-maven-plugin</artifactId>
+                    <!-- confirm the latest version at: https://mvnrepository.com/artifact/edu.berkeley.cs.jqf -->
+                    <version>1.3</version>
+                </plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
