@@ -84,8 +84,8 @@
 		<coverage.lines>.30</coverage.lines>
 		<coverage.branches>.37</coverage.branches>
 		
-		<sonar.projectKey>User1009_shopizer</sonar.projectKey>
- 		<sonar.organization>user1009</sonar.organization>
+  		<sonar.projectKey>User1009_shopizer</sonar.projectKey>
+  		<sonar.organization>user1009</sonar.organization>
   		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 
 	</properties>
