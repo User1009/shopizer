@@ -8,6 +8,8 @@ import org.springframework.context.annotation.ImportResource;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+
+
 @Configuration
 @ComponentScan({"com.salesmanager.core.business"})
 @EnableAutoConfiguration
