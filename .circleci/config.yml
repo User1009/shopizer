@@ -12,10 +12,10 @@ orbs:
 executors:
   shopizer-ci:
     docker:
-      - image: shopizerecomm/ci:latest
+      - image: etienneturin/citest:latest
         auth:
-          username: shopizerecomm
-          password: $DOCKERHUB_PASSWORD  
+          username: etienneturin
+          password: fefcf6bf-b1be-4e9c-906b-2d709a1bc174
       
 working_directory: /tmp
 
@@ -54,11 +54,11 @@ jobs:
        - run: |
            ls -al
        - run: |
-           docker login -u shopizerecomm -p $DOCKERHUB_PASSWORD 
+           docker login -u etienneturin --password fefcf6bf-b1be-4e9c-906b-2d709a1bc174
        - run: |
-           (cd sm-shop && docker build . -t shopizerecomm/shopizer:latest)
+           (cd sm-shop && docker build . -t etienneturin/shopizertest:latest)
        - run: |
-           docker push shopizerecomm/shopizer:latest
+           docker push etienneturin/shopizertest:latest
 
        #- run: |
        #    docker login -u shopizerecomm  -p $DOCKERHUB_PASSWORD  | ls -al | echo "build docker" | cd sm-shop | ls -al | docker build . -t shopizerecomm/shopizer:latest
